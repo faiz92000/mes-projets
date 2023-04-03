@@ -16,8 +16,8 @@
 			"La patience est amère, mais son fruit est doux. - Jean-Jacques Rousseau",
 			"Le bonheur est souvent la seule chose qu'on puisse donner sans l'avoir et c'est en le donnant qu'on l'acquiert. - Voltaire",
 			"Tout ce que nous avons à décider, c'est ce que nous devons faire du temps qui nous est imparti. - J.R.R. Tolkien",
-      "Je suis le developpeur qu'il vous faut pour votre projet. - Faïz Ali",
-      "N'importe quel idiot peut écrire du code qu'un ordinateur peut comprendre. Les bons programmeurs écrivent du code que les humains peuvent comprendre. - Martin Fowler"
+      			"Je suis le developpeur qu'il vous faut pour votre projet. - Faïz Ali",
+      			"N'importe quel idiot peut écrire du code qu'un ordinateur peut comprendre. Les bons programmeurs écrivent du code que les humains peuvent comprendre. - Martin Fowler"
 		];
 
 		
