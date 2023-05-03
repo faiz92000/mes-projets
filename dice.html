@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de dés</title>
+
+</head>
+<div class="game">
+  <div class="dice-container">
+    <div class="dice" id="dice1"></div>
+    <div class="dice" id="dice2"></div>
+  </div>
+  <button id="roll-btn">Lancer les dés</button>
+</div>
+   <script>const dice1 = document.getElementById('dice1');
+const dice2 = document.getElementById('dice2');
+const rollBtn = document.getElementById('roll-btn');
+
+rollBtn.addEventListener('click', () => {
+  const num1 = Math.floor(Math.random() * 6) + 1;
+  const num2 = Math.floor(Math.random() * 6) + 1;
+  dice1.innerHTML = num1;
+  dice2.innerHTML = num2;</script>
+<style>
+  .game {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+#roll-btn {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  </style>
+  
+</html>
