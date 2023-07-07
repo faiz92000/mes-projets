@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mon Jeu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Mon Jeu</h1>
+  
+  <div class="game-container border border-danger">
+    <div class="row">
+      <div class="col justify-content-start">
+        <h2>Joueur 1</h2>
+        <p>Score global: <span id="score-player1">0</span></p>
+        <p>Score ROUND: <span id="round-player1">0</span></p>
+      </div>
+      
+      <div class="col justify-content-end">
+        <h2>Joueur 2</h2>
+        <p>Score global: <span id="score-player2">0</span></p>
+        <p>Score ROUND: <span id="round-player2">0</span></p>
+      </div>
+    </div>
+    
+    <div>
+      <p>Joueur en cours: <span id="current-player">Joueur 1</span></p>
+    </div>
+    
+    <button id="new-game">Nouvelle partie</button>
+    <button id="roll-dice">Lancer le dé</button>
+    <button id="hold">Hold</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
