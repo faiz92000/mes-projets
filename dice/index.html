@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu des scores</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .player-box {
+      border: 2px solid #ccc;
+      padding: 80px;
+      border-radius: 1px;
+      position: relative;
+    }
+
+    .player-box.human-player {
+      background-color: #f8f9fa;
+    }
+
+     h2 {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .score-label {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .score-value {
+  font-size: 36px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+}
+
+
+    .current-score {
+      background-color: #dc3545;
+      color: #c40d0d;
+    }
+
+    .global-score {
+      background-color: #f8f9fa;
+    }
+
+    .btn {
+      width: 100%;
+      font-size: 24px;
+      margin-top: 20px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+
+    .btn-hold,
+    .btn-roll {
+      color: #007bff;
+      font-family: 'Material Symbols Outlined', sans-serif;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-hold .material-symbols-outlined,
+    .btn-roll .material-symbols-outlined {
+      margin-right: 10px;
+    }
+
+    .dice {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 72px;
+      margin-top: 50px;
+    }
+
+    .btn-new-game {
+      background-color: transparent;
+      color: #007bff;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-new-game .material-symbols-outlined {
+      margin-right: 10px;
+    }
+    
+    .no-border {
+      border: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Jeu des scores</h1>
+
+    <div class="row">
+      <div class="col-md-6 no-border">
+        <div class="player-box human-player">
+          <h2>Joueur 1</h2>
+          <div class="score-label">Score actuel :</div>
+          <div class="score-value current-score" id="player1-round">0</div>
+          <div class="score-label" style="top: 150px;"></div>
+          <div class="score-value global-score" id="player1-global">0</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="player-box">
+          <h2>Joueur 2</h2>
+          <div class="score-label">Score actuel :</div>
+          <div class="score-value current-score" id="player2-round">0</div>
+          <div class="score-label" style="top: 150px;"></div>
+          <div class="score-value global-score" id="player2-global">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-hold" id="hold" disabled>
+          <span class="material-symbols-outlined">system_update_alt</span>
+          Hold
+        </button>
+        <button class="btn btn-roll" id="roll-dice" disabled>
+          <span class="material-symbols-outlined">circle</span>
+          Roll dice
+        </button>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-12">
+        <div class="dice">
+          <span class="material-symbols-outlined">casino</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-new-game" onclick="location.reload()">
+          <span class="material-symbols-outlined">add_circle</span> Nouvelle partie
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
